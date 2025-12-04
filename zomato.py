@@ -19,7 +19,7 @@ st.write("Explore restaurant ratings, cost, and insights using an interactive in
 # -------------------------------
 @st.cache_data
 def load_data():
-    df = pd.read_csv("../DataSets/zomato.csv")
+    df = pd.read_csv("Zomato_Live.csv")
     df = df.drop(['url','online_order','book_table','phone','rest_type','dish_liked',
                   'menu_item','reviews_list','listed_in(type)','listed_in(city)','address'], axis=1)
     df = df.rename(columns={'approx_cost(for two people)':'approx_cost'})
